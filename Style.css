@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(10, 10, 10);
+}
+.container {
+    background-image: url(download.jpeg) ;
+    background-color: azure ;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
+
+}
+.container2 {
+    background-color: rgb(113, 226, 226) ;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
+
+}
+h1 {
+    color: azure;
+}
+p {
+    color: azure;
+}
