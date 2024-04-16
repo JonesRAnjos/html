@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+    background-image: url("./Corinthians-logo-escudo-1.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    position: relative;
+        
+        
+}
+.container {
+    
+    background-color: rgb(1, 15, 15) ;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(rgb(12, 12, 12), green, blue, alpha);
+    z-index: 1;
+
+}
+.container2 {
+    background-color: rgb(1, 17, 17) ;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
+
+}
+h1 {
+    color: rgb(111, 3, 252);
+}
+p {
+    color: rgb(1, 15, 15);
+
+    .formulario{
+     font-family: 'TypewriterFont',monospace; 
+     font-size: 18px;
+     text-align: left;
+     margin-top: 145vh;
+     margin-left: 0px;
+
+    }
