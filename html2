@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+    <script>
+        // Definição da função JavaScript para enviar o formulário
+        function enviarFormulario(event) {
+            event.preventDefault(); // Impede o comportamento padrão de envio do formulário pelo navegador.
+            //O ENVIO DO FORMULÁRIO PADRÃO SERIA O ENVIO PARA O SERVIDOR DAS INFORMAÇÕES E A PÁGINA SERIA RECARREGADA A CADA ENVIO, 
+            //ENQUANTO QUE PELO MÉTODO prevent.Default A INFORMAÇÃO É PROCESSADA NO FRONT END antes do envio ao servidor.
+
+
+
+            // Obtenção dos valores dos campos de nome e e-mail
+            const nome = document.getElementById("name").value; // Obtém o valor do campo de entrada do nome
+            const email = document.getElementById("email").value; // Obtém o valor do campo de entrada do e-mail
+
+            // Selecionar o elemento HTML onde a mensagem será exibida
+            const mensagem = document.getElementById("mensagem");
+            // está encontrando o elemento HTML na página que possui o id "mensagem" e armazenando uma referência para esse elemento na variável mensagem. 
+            //Essa referência nos permite acessar e manipular esse elemento HTML posteriormente no nosso código JavaScript.
+            // Por exemplo, podemos alterar seu conteúdo, estilo, ou realizar outras ações com ele.
+
+            // Construção da mensagem de "Pronto" com os valores do nome e do e-mail
+            mensagem.textContent = `Pronto, ${nome}! Seu formulário foi enviado com sucesso para o e-mail ${email}.`;
+
+            // Exibir a mensagem alterando o estilo para "block" (exibição)
+            mensagem.style.display = "block";
+        }
+    </script>
+
+</head>
+<body>
+    
+    <center>
+    <h1>Corinthians meu Amor</h1>
+    <p><a href="www.corinthians.com.br">Site</a></p>
+    </center>
+
+    <div class="Formulario"      
+        <h2>FORMULÁRIO DE DADOS:</h2>
+        <form onsubmit="enviarFormulario(event)">
+            <!-- Definindo o atributo "onsubmit" para chamar a função JavaScript enviarFormulario(event) quando o formulário for enviado. Isso permite que o JavaScript processe os dados do formulário antes de serem enviados para o servidor. -->
+            
+            <label for="name">Nome:</label>
+            <!-- Rótulo para o campo de entrada de nome -->
+            
+            <input type="text" id="name" name="name" required>
+            <!-- Campo de entrada de texto para o nome. O atributo "required" garante que o campo seja preenchido antes de enviar o formulário. O "id" é usado para identificar o campo no JavaScript. -->
+            
+            <label for="email">E-mail:</label>
+            <!-- Rótulo para o campo de entrada de e-mail -->
+            
+            <input type="email" id="email" name="email" required><br>
+            <!-- Campo de entrada de e-mail. O atributo "required" garante que o campo seja preenchido com um formato de e-mail válido antes 
+            de enviar o formulário. O "id" é usado para identificar o campo no JavaScript. -->
+            
+            <label for="phone">Telefone:</label><br>
+            <!-- Rótulo para o campo de entrada de telefone -->
+
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" placeholder="Formato: 11-99999-9999" required><br>
+            <!-- Campo de entrada de telefone. O atributo "pattern" especifica o formato esperado. O atributo "placeholder" fornece uma dica para o formato 
+            esperado. O atributo "required" garante que o campo seja preenchido antes de enviar o formulário. O "id" é usado para identificar o campo no 
+            JavaScript. -->
+
+            <label for="subject">Assunto:</label><br>
+            <!-- Rótulo para o campo de entrada de assunto -->
+
+            <input type="text" id="subject" name="subject"><br>
+            <!-- Campo de entrada de texto para o assunto. O "id" é usado para identificar o campo no JavaScript. -->
+
+            <label for="address">Endereço:</label><br>
+            <input type="text" id="address" name="address"><br>
+
+            <label for="city">Cidade:</label><br>
+            <input type="text" id="city" name="city"><br>
+
+            <label for="zipcode">CEP:</label><br>
+            <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}-[0-9]{3}" placeholder="Formato: 12345-678" required><br>
+
+            <label for="country">País:</label><br>
+            <input type="text" id="country" name="country"><br>
+
+            <label for="state">Estado:</label><br>
+            <select id="state" name="state">
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+
+            <label for="message">Mensagem:</label><br>
+            <!-- Rótulo para o campo de entrada de mensagem -->
+
+            
+
+<!-- adicione mais opções conforme necessário -->
+</select><br>
+
+
+
+
+
+
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            <!-- Campo de entrada de mensagem. O atributo "required" garante que o campo seja preenchido antes de enviar o formulário. O "id" é usado para 
+            identificar o campo no JavaScript. -->
+
+
+            
+            
+            <button type="submit">Enviar</button>
+            <!-- Botão de envio do formulário -->
+            ></div>
+
+        </form>  
+
+    </body>
+</html>
